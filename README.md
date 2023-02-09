@@ -1,14 +1,9 @@
-# Welcome to your CDK TypeScript project
+# aws-cdk-issue-23991
 
-This is a blank project for CDK development with TypeScript.
+## Issue
+This repository is created to demonstrate the [aws-cdk issue #23991](https://github.com/aws/aws-cdk/issues/23991)
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## Prerequisite
+* To replicate the issue we need to have a KMS created already in the AWS account.
+  - The alias name of this KMS key needs to be set as `kmsAliasName` parameter value in `./bin/aws-cdk-issue-23991.ts` [file](https://github.com/heikkima/aws-cdk-issue-23991/blob/main/bin/aws-cdk-issue-23991.ts#L11)
+* AWS account id needs to be set as `targetAcountId` parameter value in `./bin/aws-cdk-issue-23991.ts` [file](https://github.com/heikkima/aws-cdk-issue-23991/blob/main/bin/aws-cdk-issue-23991.ts#L10)
